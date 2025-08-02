@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Friendship Day!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- html2canvas for downloading -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="/bg-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container fade-in">
+    <h1>💖 Happy Friendship Day!</h1>
+    <p>Enter your name to see your special wish!</p>
+
+    <input type="text" id="nameInput" placeholder="Your name here">
+    <button id="generateBtn">🎁 Show My Wish</button>
+
+    <!-- Wish Card -->
+    <div id="wishCard" class="card hidden">
+      <div id="poster">
+        <h2 id="wishText"></h2>
+        <p id="quoteText" class="quote"></p>
+        <p class="friendship-day">💖 Happy Friendship Day 💖</p>
+      </div>
+
+      <button onclick="downloadPoster()">📥 Download Poster</button>
+      <button><a id="whatsappShare" target="_blank">📤 Share on WhatsApp</a></button>
+
+      <hr>
+
+    </div>
+
+    <!-- Music Toggle -->
+    <button id="musicToggleBtn" onclick="toggleMusic()">🔈 Play Music</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/script.js"></script>
+</body>
+</html>
